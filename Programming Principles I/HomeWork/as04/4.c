@@ -2,6 +2,7 @@
 #include <time.h>
 
 int main(void) {
+    
     int x = time(NULL) % 30 - 11;   // secret number in [-11, 18]
     int guess;
     int count = 0;
