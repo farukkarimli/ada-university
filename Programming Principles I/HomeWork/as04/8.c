@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
+
     int N;
 
     printf("Enter odd N (N > 2): ");
@@ -28,4 +29,5 @@ int main(void) {
     }
 
     return 0;
+
 }

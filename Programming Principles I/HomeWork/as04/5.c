@@ -3,7 +3,7 @@
 #include <time.h>
 
 int main(void) {
-    
+
     srand(time(NULL));
 
     printf("Let The Game Begin! (cc 'Saw')\n");
@@ -21,6 +21,7 @@ int main(void) {
     }
 
     printf("Ahh, today is just not my day, I guess :(\n");
+    
     return 0;
 
 }

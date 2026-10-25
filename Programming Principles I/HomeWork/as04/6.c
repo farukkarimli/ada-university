@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
+
     int N;
 
     printf("Enter N (0 < N < 10): ");
@@ -24,4 +25,5 @@ int main(void) {
     }
 
     return 0;
+    
 }
