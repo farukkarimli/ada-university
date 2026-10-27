@@ -14,7 +14,7 @@ int main(void){
     {
         for(int j = 0; j < COLS; j++)
         {
-            printf("arr[%d][%d] = %d", i, j, arr[i][j]);
+            printf("arr[%d][%d] = %d\n", i, j, arr[i][j]);
         }
         
     }
