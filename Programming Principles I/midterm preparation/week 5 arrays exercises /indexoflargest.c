@@ -2,7 +2,7 @@
 
 int index_of_max(int a[], int n){
     int position;
-    int max = 0;
+    int max = a[0];
 
     for(int i = 0; i < n; i++){
         if(a[i] > max){
