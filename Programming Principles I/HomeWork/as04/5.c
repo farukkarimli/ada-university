@@ -4,7 +4,7 @@
 
 int main(void) {
 
-    srand(time(NULL));
+    srand(time(NULL)); //seeds the random number generator
 
     printf("Let The Game Begin! (cc 'Saw')\n");
 
