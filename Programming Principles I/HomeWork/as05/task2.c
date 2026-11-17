@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 
 #define TRUE 1
 #define FALSE 0
@@ -28,3 +28,14 @@ int main ()
 }
 
 // You fill in here
+BOOL isPrime(int num){
+	int count = 0;
+	for(int i = 1; i <= num; i++)
+	{
+		if( num % i == 0)
+		{
+			count++;
+		}
+	}
+	return count == 2; //true only for numbers with exactly two divisors
+}
