@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 
 #define TRUE 1
 #define FALSE 0
@@ -27,3 +27,9 @@ int main ()
 }
 
 // You fill in here
+BOOL isEven(int num){
+	if(num % 2 == 0)
+	{
+		return 1;
+	}return 0;
+}
