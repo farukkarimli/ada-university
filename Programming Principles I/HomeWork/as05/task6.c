@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 
 #define TRUE 1
 #define FALSE 0
@@ -28,4 +28,13 @@ int main()
 }
 
 // You fill in here
-
+BOOL isOnly916(int arr[], int len){
+   for(int i = 0; i < len; i++)
+   {
+      if(arr[i] != 9 && arr[i] != 1 && arr[i] != 6)
+      {
+         return false;
+      } 
+   }
+   return true;
+}
