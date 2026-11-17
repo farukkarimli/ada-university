@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 
 #define TRUE 1
 #define FALSE 0
@@ -27,3 +27,16 @@ int main ()
 }
 
 // You fill in here
+BOOL isPowerOfTwo(int num){
+	int power = 1;
+
+	while(power < num)
+	{
+		power *= 2;
+	}
+
+	if(power == num)
+	{
+		return true;
+	}return false;
+}
