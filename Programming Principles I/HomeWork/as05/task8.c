@@ -24,4 +24,49 @@ int main()
 
 
 // You fill in here
+int middleAverage(int arr[], int len)
+{
+    int target1 = 0;
+    int target2 = 0;
+    int max = arr[0];
+    int min = arr[0];
+    int sum = 0;
+    
 
+    for(int i = 0; i < len; i++)
+        {
+            if(arr[i] > max)
+            {
+                max = arr[i];
+            }
+        }
+    for(int i = 0; i < len; i++)
+        {
+            if(arr[i] < min)
+            {
+                min = arr[i];
+            }
+        }
+    for(int i = 0; i < len; i++)
+        {
+            if(arr[i] == max)
+            {
+                target1 = i;
+            }
+        }
+    for(int j = 0; j < len; j++)
+        {
+            if(arr[j] == min)
+            {
+                target2 = j;
+            }
+        }  
+    for(int k = 0; k < len; k++)
+        {
+            if(arr[k] != arr[target1] && arr[k] != arr[target2])
+            {
+                sum += arr[k];
+            }
+        }
+    return sum / (len - 2);
+}
