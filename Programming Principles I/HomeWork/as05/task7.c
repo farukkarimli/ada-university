@@ -39,4 +39,18 @@ void printArray(int arr[], int len)
 }
 
 // You fill in here
+void zeroComesFirst(int arr[], int len)
+{
+	int pos = 0;
 
+	for(int i = 0; i < len; i++)
+	{
+		if(arr[i] == 0)
+		{
+			int temp = arr[pos];
+			arr[pos] = arr[i];
+			arr[i] = temp;
+			pos++;
+		}
+	}
+}
