@@ -24,3 +24,38 @@ int main()
 }
 
 // You fill in here
+void extractText(char dst[], const char src[])
+{
+	int i, j = 0;
+
+	for(i = 0; src[i] != '\0'; i++)
+	{
+		if(src[i] >= '0' && src[i] <= '9')
+		{
+			if(j > 0 && dst[j - 1] == ' ')
+			{
+				j--;   // remove the space that came before the digit
+			}
+			continue;  // skip the digit
+		}
+
+		if(src[i] == ' ')
+		{
+			if(j > 0 && dst[j - 1] != ' ')
+			{
+				dst[j++] = src[i];
+			}
+		}
+		else
+		{
+			dst[j++] = src[i];
+		}
+	}
+
+	if(j > 0 && dst[j - 1] == ' ')
+	{
+		j--;   // remove a trailing space if there is one
+	}
+
+	dst[j] = '\0';
+}
