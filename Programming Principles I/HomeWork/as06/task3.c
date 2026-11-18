@@ -17,3 +17,18 @@ int main()
 }
 
 // You fill in here
+int countDistinctVowels(const char str[])
+{
+	int a = 0, e = 0, i = 0, o = 0, u = 0;
+	
+	for(int k = 0; str[k] != '\0'; k++)
+	{
+		if(str[k] == 'a' || str[k] == 'A') a = 1;
+		if(str[k] == 'e' || str[k] == 'E') e = 1;
+		if(str[k] == 'i' || str[k] == 'I') i = 1;
+		if(str[k] == 'o' || str[k] == 'O') o = 1;
+		if(str[k] == 'u' || str[k] == 'U') u = 1;						
+	}
+
+	return a + e + i + o + u;
+}
