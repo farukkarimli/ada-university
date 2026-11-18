@@ -27,3 +27,21 @@ int main()
 }
 
 // You fill in here
+void invert(char dst[], const char src[])
+{
+	int i;
+
+	for(i = 0; src[i] != '\0'; i++)
+	{
+		if(src[i] >= 'a' && src[i] <= 'z')
+		{
+			dst[i] = src[i] - ('a' - 'A');  //convert to uppercase
+		}else if(src[i] >= 'A' && src[i] <= 'Z')
+		{
+			dst[i] = src[i] + 'a' - 'A';  //convert to lowercase
+		}else{
+			dst[i] = src[i]; //no changes
+		}
+	}
+	dst[i] = '\0'; // terminate the destination
+}
