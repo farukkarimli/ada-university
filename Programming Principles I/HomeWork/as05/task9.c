@@ -16,10 +16,10 @@ int main()
 	int nums2 [] = {1,4,1,9,9,4,1}; 
 	int nums3 [] = {4,2,2,9};
 		
-	order49(nums1);
-	order49(nums2);
-	order49(nums3);
-
+	order49(nums1, 4);
+    order49(nums2, 7);
+    order49(nums3, 4);
+	
 	printArray(nums1, SIZE(nums1));  // [1,4,9,1]
 	printArray(nums2, SIZE(nums2));  // [1,4,9,1,1,4,9]
 	printArray(nums3, SIZE(nums3));  // [4,9,2,2]
@@ -38,4 +38,24 @@ void printArray(int arr[], int len)
 }
 
 // You fill in here
+void order49(int arr[], int len)
+{
+    for (int i = 0; i < len - 1; i++)
+    {
+        if (arr[i] == 4 && arr[i + 1] != 9)
+        {
+            // find a 9 that is not already right after a 4
+            for (int j = 0; j < len; j++)
+            {
+                if (arr[j] == 9 && (j == 0 || arr[j - 1] != 4))
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[i + 1];
+                    arr[i + 1] = temp;
+                    break;
+                }
+            }
+        }
+    }
+}
 
