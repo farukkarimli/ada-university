@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+#include <ctype.h>
 
 /* function prototypes are here */
 bool isValidSchoolEmail(const char str[]);
