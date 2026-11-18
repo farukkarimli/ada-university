@@ -32,8 +32,9 @@ int main()
 // You fill in here
 void convertToHumanTime(const char date[])
 {
-    int hour = (date[0] - '0') * 10 + (date[1] - '0');
-    int minute = (date[3] - '0') * 10 + (date[4] - '0');
+    int hour, minute;
+
+    sscanf(date, "%d:%d", &hour, &minute);
 
     int nextHour = (hour + 1) % 24;
 
@@ -56,37 +57,27 @@ void convertToHumanTime(const char date[])
 
     // half past
     if (minute == 30) {
-        if (hour == 0)
-            printf("It is half past midnight.\n");
-        else if (hour == 12)
-            printf("It is half past noon.\n");
-        else
-            printf("It is half past %d.\n", hour % 12);
-
+        printf("It is half past %d.\n", hour % 12 == 0 ? 12 : hour % 12);
         return;
     }
 
     // quarter past
     if (minute == 15) {
-        if (hour == 0)
-            printf("It is quarter past midnight.\n");
-        else if (hour == 12)
+        if (hour == 12)
             printf("It is quarter past noon.\n");
         else
             printf("It is quarter past %d.\n", hour % 12);
-
         return;
     }
 
     // quarter to
     if (minute == 45) {
-        if (nextHour == 0)
-            printf("It is quarter to midnight.\n");
-        else if (nextHour == 12)
+        if (nextHour == 12)
             printf("It is quarter to noon.\n");
+        else if (nextHour == 0)
+            printf("It is quarter to midnight.\n");
         else
             printf("It is quarter to %d.\n", nextHour % 12);
-
         return;
     }
 
@@ -112,3 +103,4 @@ void convertToHumanTime(const char date[])
             printf("It is %d to %d.\n", remaining, nextHour % 12);
     }
 }
+
