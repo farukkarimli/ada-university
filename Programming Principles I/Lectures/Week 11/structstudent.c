@@ -63,4 +63,6 @@ int main(void)
     {
         print_student(sgr[i]);
     }
+
+    
 }
