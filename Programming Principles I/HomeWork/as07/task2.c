@@ -7,7 +7,7 @@
 
 typedef char BOOL;
 
-BOOL isSymmetricMatrix(int [N][N]);
+BOOL isSymmetricMatrix(int arr[N][N]);
 
 /* NO CHANGES to be done on main!!! */
 int main() 
@@ -36,3 +36,16 @@ int main()
 
 
 // You fill in here
+BOOL isSymmetricMatrix(int arr[N][N]){
+	for(int i = 0; i < N; i++)
+	{
+		for(int j = 0; j < N; j++)
+		{
+			if(arr[j][i] != arr[i][j])
+			{
+				return 0;
+			}
+		}
+	}
+	return 1;
+}
